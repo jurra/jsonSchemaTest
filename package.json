@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "@formschema/native": "^2.0.0-alpha.2",
-    "vue": "^2.5.13"
+    "@vue/cli-shared-utils": "^4.3.1",
+    "vue": "^2.5.13",
+    "vue-form-json-schema": "^2.5.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-alpha.12",

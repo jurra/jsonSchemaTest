@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/images.json",
+    "type": "object",
+    "title": "Images",
+    "required": [
+      "online_media"
+    ],
+    "definitions": {
+      "online_media": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "$id": "#/definitions/online_media/i/properties/type", 
+            "type": "string", 
+            "title": "The media type", 
+            "description": "",
+            "default": "", 
+            "example": "Images", 
+            "pattern": "^(.*)$"
+          }, 
+          "thumbnail": {
+            "$id": "#/definitions/online_media/properties/thumbnail", 
+            "type": "string", 
+            "title": "The thumbnail image", 
+            "description": "",
+            "default": "", 
+            "example": "http://example.com/thumb.jpg", 
+            "pattern": "^(http:\\/\\/www\\.|https:\\/\\/www\\.|http:\\/\\/|https:\\/\\/)?[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$",
+            "attrs": {
+              "type": "url"
+            }
+          }
+        }
+      }
+    },
+    "properties": {
+      "online_media": {
+        "$id": "#/properties/online_media",
+        "type": "array",
+        "title": "Online Media",
+        "items": {"$ref": "#/definitions/online_media"}
+      }
+    }
+  }
